@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>4_stars</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" integrity="sha384-u/bQvRA/1bobcXlcEYpsEdFVK/vJs3+T+nXLsBYJthmdBuavHvAW6UsmqO2Gd/F9" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <!-- this here is navbar  starts-->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-custom bg-success ">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" width=130px; heigth=80px;></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+    <div class="collapse navbar-collapse">
+      <h4>Developer</h4>&nbsp;&nbsp;
+      <button class="btn bg-danger my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalCenter1">log In</button>
+      <ul class="navbar-nav ml-auto px-4 display-5 ">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#works">How it works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dev">Developers</a>
+        </li>
+        <li class="nav-item">
+
+          <a class="nav-link" href="#contact">Contacts</a>
+        </li>
+      </ul>
+      <h4>Client</h4>&nbsp;&nbsp;
+      <button class="btn bg-danger my-2 my-sm-0" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Post a job</button>
+    </div>
+  </nav>
+  <!-- header image starts here -->
+  <div class="jumbotron">
+    <h1 class="text-danger">Get it Done ...</h1><br>
+    <h1 class="text-success">With world class Developer</h1><br>
+    <h5 class="text-success">Grow your business with top freelancer site </h5>
+
+  </div>
+  <!-- header image ends her -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- handle carefully this are modals-->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Online Dev. forums</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+              <h5 class="text-center text-success"><b>Please enter you job details here</b></h5>
+              <form class="text-center" action="index.html" method="post">
+                <div class="form-group">
+                  <label for=""><b>Name:</b>
+                <input type="text" name="" value="" class="form-control"></label>
+                </div>
+                <div class="form-group">
+                  <label for=""><b>Email:</b>
+                <input type="email" name="" value="" class="form-control"></label>
+                </div>
+                <div class="form-group">
+                  <label for=""><b>Job description:</b></label><br>
+                  <textarea name="name" rows="3"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- login modal be carefull too -->
+      <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Online Dev. forums</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                  <div class="panel panel-info">
+                    <div class="panel-heading">
+                      <div class="panel-title">Sign In</div>
+                      <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    </div>
+
+                    <div style="padding-top:30px" class="panel-body">
+
+                      <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                      <form id="loginform" class="form-horizontal" role="form">
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                          <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                        </div>
+
+
+
+                        <div class="input-group">
+                          <div class="checkbox">
+                            <label>
+                              <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                </label>
+                          </div>
+                        </div>
+
+
+                        <div style="margin-top:10px" class="form-group">
+                          <!-- Button -->
+
+                          <div class="col-sm-12 controls">
+                            <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                            <a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>
+
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <div class="col-md-12 control">
+                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                              Don't have an account!
+                              <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                              Sign Up Here
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+
+
+
+                    </div>
+                  </div>
+                </div>
+                <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                  <div class="panel panel-info">
+                    <div class="panel-heading">
+                      <div class="panel-title">Sign Up</div>
+                      <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                    </div>
+                    <div class="panel-body">
+                      <form id="signupform" class="form-horizontal" role="form">
+
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                          <p>Error:</p>
+                          <span></span>
+                        </div>
+
+
+
+                        <div class="form-group">
+                          <label for="email" class="col-md-3 control-label">Email</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" name="email" placeholder="Email Address">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="firstname" class="col-md-3 control-label">First Name</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password" class="col-md-3 control-label">Password</label>
+                          <div class="col-md-9">
+                            <input type="password" class="form-control" name="passwd" placeholder="Password">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                          <div class="col-md-9">
+                            <input type="text" class="form-control" name="icode" placeholder="">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <!-- Button -->
+                          <div class="col-md-offset-3 col-md-9">
+                            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                            <span style="margin-left:8px;">or</span>
+                          </div>
+                        </div>
+
+                        <div style="border-top: 1px solid #999; padding-top:20px" class="form-group">
+
+                          <div class="col-md-offset-3 col-md-9">
+                            <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
+                          </div>
+
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="row justify-content-center bg-success py-5" id="works">
+        <h1 id="works">How it works</h1>
+      </div>
+      <div class="row py-5">
+        <div class="card-group">
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img class="card-img-top" src="img/find.svg" alt="" height="150px">
+              <div class="card-body">
+                <h3>Find</h3>
+                <hr>
+                <p class="card-text">Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img class="card-img-top" src="img/hire.svg" alt="" height="150px">
+              <div class="card-body">
+                <h3>Hire</h3>
+                <hr>
+                <p class="card-text">Browse profiles, reviews, and proposals then interview top candidates. Hire a favorite and begin your project.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img class="card-img-top" src="img/work.svg" alt="" height="150px">
+              <div class="card-body">
+                <h3>Work</h3>
+                <hr>
+                <p class="card-text">Use the Upwork platform to chat, share files, and collaborate from your desktop or on the go.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card text-center">
+              <img class="card-img-top" src="img/pay.svg" alt="" height="150px">
+              <div class="card-body">
+                <h3>Pay</h3>
+                <hr>
+                <p class="card-text">Invoicing and payments happen through 4 stars. With 4 stars Protection, only pay for work you authorize.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-12  py-5 text-center bg-success">
+        <h2 class="">Build your online team</h2><br>
+        <button type="button" name="button" class="btn bg-danger">Get started</button>
+      </div>
+
+      <div class="row justify-content-center py-5">
+        <h1 id="services" class="text-success">Services</h1>
+      </div>
+      <div class="card py-2">
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              <div class="row justify-content-center">
+                <div class="col-md-4">
+                  <h3>Our developers can undertake a range of projects</h3>
+                </div>
+
+                <div class="col-md-4">
+                  <h2>Website Devlopers</h2>
+                  <p>We have developers efficient in website development that is Front-End,Back-End and Fullstack development</p>
+                </div>
+
+                <div class="col-md-3">
+                  <h2>Anroid Devlopers</h2>
+                  <p>We have developers efficient in of anroid applications using XML and Java</p>
+                </div>
+              </div>
+        </div>
+        </p>
+
+        </blockquote>
+      </div>
+
+
+      <!--The services tabs ends here  -->
+
+      <!--  The developers tags start -->
+
+      <div class="row justify-content-center py-5" id="developers">
+        <div class="col-xm-12 col-sm-12 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/web.svg" alt="Card image cap" width="100px" height="100px">
+            <center> Web-Developers</center>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/software.svg" alt="Card image cap" width="100px" height="100px">
+            <center> Software-Engineers</center>
+          </div>
+        </div>
+
+        <div class="col-xm-12 col-sm-12 col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/mobile.svg" alt="Card image cap" width="100px" height="100px">
+            <center> Mobile-Developers</center>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src="img/software.svg" alt="Card image cap" height="100px" width="100px">
+            <center> Project managers</center>
+          </div>
+        </div>
+      </div>
+      <!-- developers tab strats here -->
+
+      <div class="row justify-content-center bg-success py-5">
+        <h1 id="dev">Developers</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-img-top rounded-circle img-fluid img-thumbnail" src="img/lorna.png" alt="">
+            <div class="card-body">
+              <h3><b>Lorna Kimani</b></h3>
+              <h6>Fullstack Dev.</h6>
+              <hr>
+              <h5><b>Hour rate:</b>$20</h5>
+              <hr>
+              <h5><b>Location:</b>Githurai</h5>
+              <hr>
+              <h5><b>Job Succes:</b>100%</h5>
+              <hr>
+              <span class="badge badge-primary">Js</span>
+              <span class="badge badge-secondary">Jquery</span>
+              <span class="badge badge-success">Html5</span>
+              <span class="badge badge-danger">Css 3</span>
+
+            </div>
+            <div class="card-footer">
+              <button type="button" name="button" class="btn bg-danger">Hire me</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-img-top rounded-circle img-fluid img-thumbnail" src="img/salim.png" alt="">
+            <div class="card-body">
+              <h3><b>Salim Ismail</b></h3>
+              <h6>Android Dev.</h6>
+              <hr>
+              <h5><b>Hour rate:</b>$25</h5>
+              <hr>
+              <h5><b>Location:</b>Eastleigh</h5>
+              <hr>
+              <h5><b>Job Success:</b>100%</h5>
+              <hr>
+              <span class="badge badge-primary">Js</span>
+              <span class="badge badge-secondary">Jquery</span>
+              <span class="badge badge-success">Html5</span>
+              <span class="badge badge-danger">Css 3</span>
+
+            </div>
+            <div class="card-footer">
+              <button type="button" name="button" class="btn bg-danger">Hire me</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-img-top rounded-circle img-fluid img-thumbnail" src="img/tirop.png" alt="">
+            <div class="card-body">
+              <h3><b>Tirop Meshark</b></h3>
+              <h6>Fullstack Dev.</h6>
+              <hr>
+              <h5><b>Hour rate:</b>$10</h5>
+              <hr>
+              <h5><b>Location:</b>Karen</h5>
+              <hr>
+              <h5><b>Job Succes:</b>100%</h5>
+              <hr>
+              <span class="badge badge-primary">Js</span>
+              <span class="badge badge-secondary">Jquery</span>
+              <span class="badge badge-success">Html5</span>
+              <span class="badge badge-danger">Css 3</span>
+
+            </div>
+            <div class="card-footer">
+              <button type="button" name="button" class="btn bg-danger">Hire me</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-img-top rounded-circle img-fluid img-thumbnail" src="img/maina.jpeg" alt="">
+            <div class="card-body">
+              <h3><b>Maina Josiah</b></h3>
+              <h6>Android Dev.</h6>
+              <hr>
+              <h5><b>Hour rate:</b>$100</h5>
+              <hr>
+              <h5><b>Location:</b>Wanyee</h5>
+              <hr>
+              <h5><b>Job Succes:</b>100%</h5>
+              <hr>
+              <span class="badge badge-primary">Js</span>
+              <span class="badge badge-secondary">Jquery</span>
+              <span class="badge badge-success">Html5</span>
+              <span class="badge badge-danger">Css 3</span>
+
+            </div>
+            <div class="card-footer">
+              <button type="button" name="button" class="btn bg-danger">Hire me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--The footer  -->
+      <div class="row justify-content-center bg-success py-5">
+        <h1 id="contact">Contact Us</h1>
+      </div>
+      <div class="row justify-content-center py-1 ">
+        <!-- this here is navbar ends -->
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-top" src="img/mor.png" alt="moringaschool" width="190" height="60px">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-top"src="img/github.png" alt="safaricom" width=130px heigth=190px>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-top"src="img/im.png" alt="I&M" width=120px heigth=120px>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img class="card-top img" src="img/cyt.png" alt="Cytonn" width=150px heigth=150px>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="com-md-12">
+            <h1 class="section-header text-success">Get in Touch with us</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="exampleInputUsername">Your name</label>
+            <input type="text" class="form-control" id="" placeholder=" Enter Name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail">Email Address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Mobile No.</label>
+            <input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
+          </div>
+        </div>
+      </form>
+        <div class="col-md-6">
+          <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for ="description"> Message</label>
+            <textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
+          </div>
+        </form>
+        </div>
+      </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+.jumbotron{
+  height: 450px;
+  background-image: url(../img/f4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.navbar-custom {
+    background-color:;
+}
+/*change the brand and text color */
+.navbar-custom .navbar-text {
+    color: black;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: black;
+    font-size: 17px;
+}
+/*change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link{
+    color: red;
+  z-index: 1;
+  position:relative;
+
+}
+html {
+    font-size: 15px;
+}
+.content-header{
+font-family: 'Oleo Script', cursive;
+color:#fcc500;
+font-size: 45px;
+}
+
+.section-content{
+text-align: center;
+
+}
+#contacts{
+
+font-family: 'Teko', sans-serif;
+padding-top: 60px;
+width: 100%;
+width: 100vw;
+height: 550px;
+}
+
+
+.form-line{
+border-right: 1px solid #B29999;
+}
+
+textarea.form-control {
+  height: 135px;
+
+}
+
+.submit{
+font-size: 1.1em;
+float: right;
+width: 150px;
+color: #fff;
+}
+
+.card{
+  border: none;
+}
+.col-md-4 {
+    border-right: 2px solid grey;
+}
+
+#works{
+  margin-top: -30px;
+}
